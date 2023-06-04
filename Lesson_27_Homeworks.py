@@ -32,6 +32,18 @@ if  method.lower() == "register":
         print(user_2.purchase("sweater", 1), f"{time.time()-s:8f}")
 
 
+# IndexError
+
+# Husan
+
+user_id = int(list(get_csvdata("users.csv"))[-1]["id"]) + 1
+
+# 
+try: list(get_csvdata("users.csv"))[-1]["id"]
+except IndexError: user_id = 1
+else: user_id = int(list(get_csvdata("users.csv"))[-1]["id"]) + 1
+
+
 # 2
 
 # 1. Вывести на экран имена всех пользователей из файла passwords.csv и записать их в список compromised_users 
