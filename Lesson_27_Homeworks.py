@@ -1,6 +1,6 @@
 # Husan:
 
-# 1. Не выводит ошибку. Методы класса Store при неправильном вводе данных возвращают ошибку. (и программа продолжает работать с неправильными данными).
+# 1. Не выводит ошибку. Методы класса Store при неправильном вводе данных возвращают ошибку.
 # 2. Нет обработки исключений. Если файл(users.csv или products.csv) пустой, программа возвращает ошибку 
 # user_id = int(list(get_csvdata("users.csv"))[-1]["id"]) + 1
 # 	IndexError: list index out of range
@@ -47,7 +47,7 @@ else: user_id = int(list(get_csvdata("users.csv"))[-1]["id"]) + 1
 # 2
 
 # 1. Вывести на экран имена всех пользователей из файла passwords.csv и записать их в список compromised_users 
-# Husan 
+# 
 with open("passwords.csv", encoding="utf-8") as passwords:
     reader = csv.DictReader(passwords)
 
@@ -60,5 +60,5 @@ with open("passwords.csv", encoding="utf-8") as passwords:
     reader = csv.DictReader(passwords)
 
     for row in reader:
-        print(f"Username: {row['Username']}. Password: {row['Password']}\n") #!!!!
+        print(f"Username: {row['Username']}. Password: {row['Password']}\n") 
         compromised_users.append(row)
