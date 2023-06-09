@@ -1,22 +1,23 @@
 import re
 
+
 # Дз
 # 1. Используя исключения, исправьте код ниже
-# staff = {
-#     "Austin": {"floor managers": 1, "sales associates": 5},
-#     "Melbourne": {"floor managers": 0, "sales associates": 8},
-#     "Beijing": {"floor managers": 2, "sales associates": 5},
-# }
+staff = {
+    "Austin": {"floor managers": 1, "sales associates": 5},
+    "Melbourne": {"floor managers": 0, "sales associates": 8},
+    "Beijing": {"floor managers": 2, "sales associates": 5},
+}
 
 
-# def print_staff_report(location, staff_dict):
-#     managers = staff_dict["floor managers"]
-#     sales_people = staff_dict["sales associates"]
-#     ratio = sales_people / managers                    # ! Error
-#     print("Instrument World " + location + " has:")
-#     print(str(sales_people) + " sales employees")
-#     print(str(managers) + " floor managers")
-#     print("The ratio of sales people to managers is " + str(ratio))
+def print_staff_report(location, staff_dict):
+    managers = staff_dict["floor managers"]
+    sales_people = staff_dict["sales associates"]
+    ratio = sales_people / managers
+    print("Instrument World " + location + " has:")
+    print(str(sales_people) + " sales employees")
+    print(str(managers) + " floor managers")
+    print("The ratio of sales people to managers is " + str(ratio))
 
 
 # for location, staff in staff.items():
@@ -28,29 +29,30 @@ import re
 # 2. Используя исключения, исправьте код ниже и создайте собственное исключение,
 # которое должно вывести ошибку, если количество покупаемых больше количеств товаров в наличии.
 # Также добавьте сообщение для созданного исключения с строкой: 'We don't' + str(self.supply) + ' in stock'
+inventory = {"Piano": 3, "Lute": 1, "Sitar": 2}
 
 
-# inventory = {"Piano": 3, "Lute": 1, "Sitar": 2}
+# Write your code below
+class SupplyNotAvailable(Exception):
+    def __init__(self, supply):
+        self.supply = supply
 
-# class SupplyNotAvailable(Exception):
-#     def __init__(self, supply):
-#         self.supply = supply
-#     def __str__(self) -> str:
-#         return f"We don't " + str(self.supply) + " in stock"
-
-
-# def submit_order(instrument, quantity):
-#     supply = inventory[instrument]
-    
-#     if supply < quantity:
-#         raise SupplyNotAvailable(instrument)
-
-#     inventory[instrument] -= quantity               # ! Error 
-#     print("Successfully placed order! Remaining supply: " + str(supply))
+    def __str__(self) -> str:
+        return f"We don't " + str(self.supply) + " in stock"
 
 
-# instrument = "Guitar"
-# quantity = 5
+def submit_order(instrument, quantity):
+    supply = inventory[instrument]
+    # Write your code below
+    if supply < quantity:
+        raise SupplyNotAvailable(instrument)
+
+    inventory[instrument] -= quantity
+    print("Successfully placed order! Remaining supply: " + str(supply))
+
+
+instrument = "Guitar"
+quantity = 5
 
 # try:
 #     submit_order(instrument, quantity)
@@ -58,7 +60,6 @@ import re
 #     raise error
 
 # 3. Написать регулярное выражения, для нахождения навыков программирования из данного списка слов
-
 titles = [
     "Middle JavaScript Developer",
     "Middle JavaScript Developer (AngularJS 9)",
