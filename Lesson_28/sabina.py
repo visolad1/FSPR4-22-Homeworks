@@ -28,14 +28,13 @@
 #     print('Instrument World ' + location + ' has:')
 #     print(str(sales_people) + ' sales employees')
 #     print(str(managers) + ' floor managers')
-#     # ! print() 
 #     # print('The ratio of sales people to managers is ' + str(ratio))
 
 
 # for location, staff in staff.items():
 #     print_staff_report(location, staff)
 
-# ! Тут все работает нормально
+
 
 # 2. Используя исключения, исправьте код ниже и создайте собственное исключение, которое должно вывести ошибку, если количество покупаемых больше количеств товаров в наличии. Также добавьте сообщение для созданного исключения с строкой: 'We don't' + str(self.supply) + ' in stock'
 # inventory = {
