@@ -33,5 +33,6 @@ class TestNumDivision(unittest.TestCase):
         result = hw29.num_division(test_num)
         self.assertEqual(result, 2) # self.assertEqual(result, 3)
 
-    
 unittest.main()
+
+# ! Названия тестов
