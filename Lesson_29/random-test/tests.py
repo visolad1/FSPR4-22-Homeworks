@@ -4,11 +4,11 @@ from game import find_num
 class TestFindNum(unittest.TestCase):
     def test_correct_guess(self):
         result = find_num(5, 5)
-        self.assertEqual(result, True)
+        self.assertTrue(result)
     
     def test_incorrect_guess(self):
         result = find_num(7, 3)
-        self.assertEqual(result, None)
+        self.assertIsNone(result)
 
     def test_value_error(self):
         result = find_num(5, 'abc')
