@@ -19,4 +19,4 @@ password = 'passLword56@'
 card_code = '1346134613461346'
 card_balance = 1000
 
-print(user.register(name, email, password, card_code, card_balance))
+# print(user.register(name, email, password, card_code, card_balance))
