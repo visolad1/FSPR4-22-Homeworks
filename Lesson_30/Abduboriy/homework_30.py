@@ -94,6 +94,32 @@ class TestLogin(unittest.TestCase):
         result = store.login('user@example.com', '')
         self.assertEqual(result, 'Empty values were given.')
 
+# class TestLogin(unittest.TestCase):
+#     def test_login_success(self):
+#          store = Store('Store Name', 'user@example.com', 'password', '1234', 100.0)
+#         result = store.login('behruz@gmail.com', '234fjfdsd')
+#         self.assertIsInstance(result, Store)
+
+#     def test_login_wrong_email(self):
+#         store = Store('Store Name', 'user@example.com', 'password', '1234', 100.0)
+#         result = store.login('wrong@example.com', 'password')
+#         self.assertEqual(result, 'Wrong email or password')
+
+#     def test_login_wrong_password(self):
+#         store = Store('Store Name', 'user@example.com', 'password', '1234', 100.0)                   #!!!!!!!!!!!!!!!!!!!!!11
+#         result = store.login('user@example.com', 'wrongpassword')
+#         self.assertEqual(result, 'Wrong email or password')
+
+#     def test_login_empty_email(self):
+#         store = Store('Store Name', 'user@example.com', 'password', '1234', 100.0)
+#         result = store.login('', 'password')
+#         self.assertEqual(result, 'Empty values were given.')
+
+#     def test_login_empty_password(self):
+#         store = Store('Store Name', 'user@example.com', 'password', '1234', 100.0)
+#         result = store.login('user@example.com', '')
+#         self.assertEqual(result, 'Empty values were given.')
+
 if __name__ == '__main__':
     unittest.main()
 
