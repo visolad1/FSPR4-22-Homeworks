@@ -39,7 +39,7 @@ class Store:
 # ! class Store:
 # !     def register(name, email, password, card_code, card_balance):
 # !         name_match = re.match(r'^[A-Z]+[A-Za-z]*$', name)
-# !         email_match = re.match(r'^[a-zA-Z.]+@[a-zA-Z]+\.[a-zA-Z]*$', email)
+# !         email_match = re.match(r"^[a-zA-Z0-9_.+-]+\.+@[a-zA-Z-0-9-.]+$", email)
 # !         password_match = re.match(r"^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$])[a-zA-Z0-9@#$]{6,16}$", password)
 # !         card_code_match = re.match(r'^\d{16}$', card_code)
 
