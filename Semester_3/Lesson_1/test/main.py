@@ -41,8 +41,12 @@ def print_results(pages):
         """)
 
 
-try:
-    pages = parse_vox(1)
-    print_results(pages)
-except RequestError as err:
-    print(err)
+def main():
+    pages_count = int(input("Pages count: "))
+    try:
+        pages = parse_vox(pages_count)
+        print_results(pages)
+    except RequestError as err:
+        print(err)
+
+main()
